@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETO 2 GR 32</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="funcionesGR32/funcionesmensajes.js"></script>
+    <style>
+      
+ * {
+  box-sizing: border-box;
+ }
+
+   body {
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* Style the header */
+  header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  }
+
+/* Create two columns/boxes that floats next to each other */
+ nav {
+   float: left;
+   width: auto;
+   height: 500px; /* only for demonstration, should be removed */
+   background: #ccc;
+   padding: 20px;
+ }
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 500px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 50%;
+    height: auto;
+  }
+}
+</style>
+<style>
+        table, th, td, tr {
+                    border-collapse: collapse;
+                    border-radius: 5px;
+                    border-spacing: 50px;
+        }
+</style>
+    <h1>Alquiler de Bicicletas - Módulo Mensajes</h1>
+</head>
+<body>
+    <section>  
+        <nav>
+            <ul>
+                <li><a href="Bicicletas.html">Bicicletas</a></li>
+                <li><a href="Clientes.html">Clientes</a></li>
+            </ul> 
+        </nav>  
+        <article>
+            <div id="idDivConsulta">
+        
+            </div>
+            <br>
+        <table>
+            <td>
+                <tr>
+                    
+                </tr>
+            <div>
+                <caption>Registro de Mensajes</caption>
+                <tr></tr>
+                <tr>
+                    <td>
+                         <label class="w3-text-blue"><b>Id :</b></label>
+                    </td>
+                    <td>
+                        <input type="number" id="id" placeholder="id" value=" ">
+                    </td>
+                    <td>
+                        <label><b>Message Text:</b></label>
+                    </td>
+                    <td>
+                        <input type="textarea" id="messagetext" placeholder="messagetext" value=" ">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset" onclick="limpiarcajas()">
+                    </td>
+                </tr> 
+                <tr>   
+                        
+                </tr>    
+            </div>
+            </td>
+        </table>
+        <br>
+        <table>
+            <tr> 
+
+                <caption>Operaciones sobre la Tabla Mensajes</caption>
+                
+            </tr>
+            <tr>
+                <td><button onclick="consultar()">Consultar Mensajes</button></td>
+                <td><button onclick="consultarId()">Consultar Mensaje por Id</button></td>
+                <td><button onclick="insertar()">Insertar Mensajes</button></td>
+                <td><button onclick="borrar()">Eliminar Mensajes</button></td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td><button onclick="actualizar()">Actualizar Mensaje</button></td>
+            </tr>    
+        </td>
+        </table>    
+    </article>  
+</section>  
+</body>
+</html>
